@@ -51,140 +51,11 @@
                 </tbody>
             </table>
         </div>
-        <?php
+    <?php
     } else {
         $tentativi--;
-        switch ($tentativi) {
-            case 2:
-        ?>
-                <h1 class="title">Password errata! Tentativi rimasti: 2</h1>
-                <form class="row g-3 signIn" action="./controllo.php" method="GET">
-                    <div class="col-md-4">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="cognome" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="cognome" name="cognome" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="Username" class="form-label">Username</label>
-                        <div class="input-group has-validation">
-                            <span class="input-group-text" id="Username">@</span>
-                            <input type="text" class="form-control" id="Username" name="Username" placeholder="Inserisci un username" required>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="sport" class="form-label">Sport preferito</label>
-                        <input type="text" class="form-control" id="sport" name="sport" required>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="sesso" class="form-label">Sesso</label>
-                        <select class="form-select" id="sesso" name="sesso" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>Maschio</option>
-                            <option>Femmina</option>
-                            <option>Altro</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="età" class="form-label">Età</label>
-                        <input type="number" class="form-control" id="età" name="età" required>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="colore" class="form-label">Colore sfondo</label>
-                        <input type="color" class="form-control form-control-color" id="colore" name="colore" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <div class="col-md-6" style="margin-top: 55px;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" for="invalidCheck">
-                                Accetto i Termini e le Condizoni per il trattamento dei dati Personali.
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button class="btn btn-warning" type="submit">Invia dati</button>
-                    </div>
-                </form>
-            <?php
-                break;
-            case 1:
-            ?>
-                <h1 class="title">Password errata! Tentativi rimasti: 1</h1>
-                <form class="row g-3 signIn" action="./controllo.php" method="GET">
-                    <div class="col-md-4">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="cognome" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="cognome" name="cognome" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="Username" class="form-label">Username</label>
-                        <div class="input-group has-validation">
-                            <span class="input-group-text" id="Username">@</span>
-                            <input type="text" class="form-control" id="Username" name="Username" placeholder="Inserisci un username" required>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="sport" class="form-label">Sport preferito</label>
-                        <input type="text" class="form-control" id="sport" name="sport" required>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="sesso" class="form-label">Sesso</label>
-                        <select class="form-select" id="sesso" name="sesso" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>Maschio</option>
-                            <option>Femmina</option>
-                            <option>Altro</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="età" class="form-label">Età</label>
-                        <input type="number" class="form-control" id="età" name="età" required>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="colore" class="form-label">Colore sfondo</label>
-                        <input type="color" class="form-control form-control-color" id="colore" name="colore" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <div class="col-md-6" style="margin-top: 55px;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" for="invalidCheck">
-                                Accetto i Termini e le Condizoni per il trattamento dei dati Personali.
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button class="btn btn-warning" type="submit">Invia dati</button>
-                    </div>
-                </form>
-            <?php
-                break;
-            case 0:
-            ?>
-                <h1 class="title">Password errata! Tentativi rimasti: 0</h1>
-            <?php
-                break;
-            default:
-            ?>
-                <h1 class="title">Errore del sistema, ricaricare la pagina.</h1>
-        <?php
-        }
-        ?>
-
-        ?>
-        <h1 class="title">Password errata! Tentativi rimasti: <?php echo $tentativi ?></h1>
+    ?>
+        <h1 class="title">Password errata! Tentativi rimasti: 2</h1>
         <form class="row g-3 signIn" action="./controllo.php" method="GET">
             <div class="col-md-4">
                 <label for="nome" class="form-label">Nome</label>
@@ -239,7 +110,6 @@
             </div>
         </form>
     <?php
-        $tentativi--;
     }
     ?>
 </body>
