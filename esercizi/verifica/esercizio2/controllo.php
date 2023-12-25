@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title> Log-in Succed</title>
+    <title> Log-in</title>
     <link href="/esercizi/stileGenerale.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -16,7 +16,7 @@
             <h1> Nome Utente e Password inseriti correttamente!</h1>
         </div>
     <?php
-    } elseif ($_GET['contatore'] != 0) {
+    } elseif ($_GET["contatore"] > 1) {
         $_GET["contatore"]--;
     ?>
         <h1 class="title">Password errata! Tentativi rimasti: <?= $_GET["contatore"] ?></h1>
@@ -30,7 +30,7 @@
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div>
-                <input type="hidden" name="contatore" value="3">
+                <input type="hidden" name="contatore" value="<?= $_GET["contatore"] ?>">
             </div>
             <div class="col-12">
                 <button class="btn btn-warning" type="submit">Log in</button>
@@ -39,7 +39,7 @@
     <?php
     } else {
     ?>
-        <h1 class="title">Password errata! Tentativi rimasti: <?= $_GET["contatore"] ?></h1>
+        <h1 class="title">Password errata! Nessun tentativo rimasto.</h1>
     <?php
     }
     ?>
